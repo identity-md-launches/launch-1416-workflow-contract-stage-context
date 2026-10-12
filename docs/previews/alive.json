@@ -1,0 +1,43 @@
+{
+  "name": "DRONE-0001",
+  "description": "PULSE - Keep the Swarm Alive. A soulbound Drone. Beat every 20 to 48 hours; stake PULSE to rise through the Hive.",
+  "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIj48dGl0bGU+RFJPTkUtMDAwMSAtIEFsaXZlPC90aXRsZT48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjMyIiBmaWxsPSIjMEMwQTA5Ii8+PHBhdGggZD0iTTAgMTAwSDUxMk0wIDQxMkg1MTJNMTAwIDBWNTEyTTQxMiAwVjUxMiIgc3Ryb2tlPSIjMjkyMDE4IiBzdHJva2Utd2lkdGg9IjEiLz48ZGVmcz48ZmlsdGVyIGlkPSJnbG93IiB4PSItNTAlIiB5PSItNTAlIiB3aWR0aD0iMjAwJSIgaGVpZ2h0PSIyMDAlIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxMiIvPjwvZmlsdGVyPjwvZGVmcz48cG9seWdvbiBwb2ludHM9IjI1NiwxMjYgMzY1LDE4OSAzNjUsMzE1IDI1NiwzNzggMTQ3LDMxNSAxNDcsMTg5IiBmaWxsPSIjRjU5RTBCIiBmaWx0ZXI9InVybCgjZ2xvdykiIG9wYWNpdHk9IjAuNTUiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiIHZhbHVlcz0iMC4yNTswLjc1OzAuMjUiIGR1cj0iNHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9wb2x5Z29uPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZCQkYyNCIgc3Ryb2tlLXdpZHRoPSIyIj48cG9seWdvbiBkYXRhLWF1cmE9IjEiIHBvaW50cz0iMjU2LDExMiAzNzcsMTgyIDM3NywzMjIgMjU2LDM5MiAxMzUsMzIyIDEzNSwxODIiLz48cG9seWdvbiBkYXRhLWF1cmE9IjIiIG9wYWNpdHk9IjAuNjUiIHBvaW50cz0iMjU2LDEwMSAzODcsMTc3IDM4NywzMjcgMjU2LDQwMyAxMjUsMzI3IDEyNSwxNzciLz48L2c+PHBvbHlnb24gcG9pbnRzPSIyNTYsMTI2IDM2NSwxODkgMzY1LDMxNSAyNTYsMzc4IDE0NywzMTUgMTQ3LDE4OSIgZmlsbD0iI0I4NzMzMyIgc3Ryb2tlPSIjRkJCRjI0IiBzdHJva2Utd2lkdGg9IjMiLz48cG9seWdvbiBwb2ludHM9IjI1NiwxNDQgMzQ5LDE5OCAzNDksMzA2IDI1NiwzNjAgMTYzLDMwNiAxNjMsMTk4IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRUYzQzciIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+PHBhdGggZD0iTTE4MyAyMjNIMzI5VjI3N0gxODNaIiBmaWxsPSIjMTcxNzE3Ii8+PGcgZmlsbD0iI0ZFRjNDNyI+PGNpcmNsZSBjeD0iMjIwIiBjeT0iMjUwIiByPSI3Ii8+PGNpcmNsZSBjeD0iMjU2IiBjeT0iMjUwIiByPSI3Ii8+PGNpcmNsZSBjeD0iMjkyIiBjeT0iMjUwIiByPSI3Ii8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzNiAyOTQpIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRUYzQzciIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZGF0YS1jYXN0ZT0iV29ya2VyIj48cGF0aCBkPSJNNiA2TDM0IDM0TTM0IDZMNiAzNE0zIDEzTDEzIDNNMjcgMzdMMzcgMjciLz48L2c+PGcgZGF0YS1yYW5rPSJXb3JrZXIiPjxjaXJjbGUgY3g9IjQ1NiIgY3k9IjU2IiByPSIyNSIgZmlsbD0iIzE3MTcxNyIgc3Ryb2tlPSIjRkJCRjI0IiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0NTYiIHk9IjYxIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkJCRjI0Ij5XPC90ZXh0PjwvZz48ZyBmb250LWZhbWlseT0ibW9ub3NwYWNlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkVGM0M3Ij48dGV4dCB4PSIyNTYiIHk9IjU4IiBmb250LXNpemU9IjI0IiBsZXR0ZXItc3BhY2luZz0iNCI+RFJPTkUtMDAwMTwvdGV4dD48dGV4dCB4PSIyNTYiIHk9Ijg4IiBmb250LXNpemU9IjEyIiBsZXR0ZXItc3BhY2luZz0iMyI+V29ya2VyPC90ZXh0Pjx0ZXh0IHg9IjI1NiIgeT0iNDM3IiBmb250LXNpemU9IjE2Ij5BTElWRSAvIFNUUkVBSyAzMDwvdGV4dD48dGV4dCB4PSIyNTYiIHk9IjQ3MSIgZm9udC1zaXplPSIxMSIgbGV0dGVyLXNwYWNpbmc9IjMiPlBVTFNFIC8gS0VFUCBUSEUgU1dBUk0gQUxJVkU8L3RleHQ+PC9nPjwvc3ZnPg==",
+  "attributes": [
+    {
+      "trait_type": "Caste",
+      "value": "Worker"
+    },
+    {
+      "trait_type": "Color",
+      "value": "Copper"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Triad"
+    },
+    {
+      "trait_type": "Status",
+      "value": "Alive"
+    },
+    {
+      "trait_type": "Streak",
+      "value": 30
+    },
+    {
+      "trait_type": "Best Streak",
+      "value": 30
+    },
+    {
+      "trait_type": "Total Beats",
+      "value": 30
+    },
+    {
+      "trait_type": "Rank",
+      "value": "Worker"
+    },
+    {
+      "trait_type": "Staked",
+      "value": "2000"
+    }
+  ]
+}
