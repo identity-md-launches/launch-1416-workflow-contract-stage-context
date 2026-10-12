@@ -1,0 +1,22 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "LaunchToken",
+    "name": "Pulse",
+    "symbol": "PULSE",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "PulseDrone",
+      "constructorArgs": ["$token"]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "LaunchToken is Pulse (PULSE), a plain fixed-supply ERC-20 with 18 decimals and no constructor arguments. PulseDrone permanently binds PULSE through its sole address constructor argument, $token. It provides free soulbound Drone minting, heartbeats, fully onchain art and instant staking withdrawals; staking determines rank and pays no rewards. PulseDrone has no owner or administrative powers and requires no initialization calls. DroneArt is an internal library inlined into PulseDrone, not a separate deployment. The factory supplies the pool, MerkleDistributor and initialization-only pool guard. The pool pairs with IMD at a 1.25% fee. The manifest initialPrice is the prescribed reference value; services derive the effective opening price from the launch policy and token ordering. Policy and signed artifact linkage are service responsibilities."
+}
