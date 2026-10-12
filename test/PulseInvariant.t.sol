@@ -83,8 +83,55 @@ contract PulseHandler is Test {
         (bool ok,) = address(drone).call(abi.encodeCall(drone.transferFrom, (actors[i], actors[(i + 1) % 4], i + 1)));
         assertFalse(ok);
     }
+
+    // Failed calls are deliberately interleaved with funded calls: their effects must be atomic.
+    function rejectedMutation(uint8 who, uint8 operation) external {
+        uint256 i = uint256(who) % 4;
+        bytes memory data;
+        bytes memory expected;
+        if (operation % 4 == 0) {
+            data = abi.encodeCall(drone.mint, ());
+            expected = abi.encodeWithSelector(PulseDrone.AlreadyHasDrone.selector);
+        } else if (operation % 4 == 1) {
+            data = abi.encodeCall(drone.stake, (0));
+            expected = abi.encodeWithSelector(PulseDrone.ZeroAmount.selector);
+        } else if (operation % 4 == 2) {
+            data = abi.encodeCall(drone.unstake, (deposited[i] + 1));
+            expected = abi.encodeWithSelector(PulseDrone.InsufficientStake.selector, deposited[i], deposited[i] + 1);
+        } else {
+            vm.prank(actors[i]);
+            token.approve(address(drone), 0);
+            data = abi.encodeCall(drone.stake, (1));
+            expected =
+                abi.encodeWithSignature("ERC20InsufficientAllowance(address,uint256,uint256)", address(drone), 0, 1);
+        }
+        vm.prank(actors[i]);
+        (bool ok, bytes memory result) = address(drone).call(data);
+        assertFalse(ok);
+        assertEq(result, expected);
+    }
+
+    function roundTrip(uint8 who) external {
+        uint256 i = uint256(who) % 4;
+        uint256 amount = token.balanceOf(actors[i]);
+        if (amount == 0) return;
+        bytes memory beforeState = abi.encode(drone.stateOf(i + 1));
+        uint256 beforeTotal = drone.totalStaked();
+        uint256 beforeCustody = token.balanceOf(address(drone));
+        vm.startPrank(actors[i]);
+        token.approve(address(drone), amount);
+        drone.stake(amount);
+        drone.unstake(amount);
+        vm.stopPrank();
+        assertEq(token.balanceOf(actors[i]), amount);
+        assertEq(token.balanceOf(address(drone)), beforeCustody);
+        assertEq(drone.totalStaked(), beforeTotal);
+        assertEq(abi.encode(drone.stateOf(i + 1)), beforeState);
+    }
 }
 
+/// forge-config: default.invariant.runs = 256
+/// forge-config: default.invariant.depth = 96
 contract PulseInvariantTest is StdInvariant, Test {
     LaunchToken private token;
     PulseDrone private drone;
@@ -103,12 +150,14 @@ contract PulseInvariantTest is StdInvariant, Test {
             drone.mint();
         }
         handler = new PulseHandler(token, drone, actors);
-        bytes4[] memory selectors = new bytes4[](5);
+        bytes4[] memory selectors = new bytes4[](7);
         selectors[0] = PulseHandler.deposit.selector;
         selectors[1] = PulseHandler.withdraw.selector;
         selectors[2] = PulseHandler.donate.selector;
         selectors[3] = PulseHandler.heartbeat.selector;
         selectors[4] = PulseHandler.forbiddenTransfer.selector;
+        selectors[5] = PulseHandler.rejectedMutation.selector;
+        selectors[6] = PulseHandler.roundTrip.selector;
         targetSelector(FuzzSelector({addr: address(handler), selectors: selectors}));
         targetContract(address(handler));
     }
